@@ -1,0 +1,37 @@
+{
+    "name": "zend/zend-studio-development-mode",
+    "description": "Zend Framework 2 module that helps the Zend Framework 2 application to be developed with Zend Studio",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "zend studio",
+        "zend framework",
+        "zf2",
+        "development",
+        "mode"
+    ],
+    "homepage": "https://github.com/zendtech/zend-studio-development-mode",
+    "support": {
+        "source": "https://github.com/zendtech/zend-studio-development-mode",
+        "issues": "https://github.com/zendtech/zend-studio-development-mode/issues"
+    },
+    "authors": [
+        {
+            "name": "Kaloyan Raev",
+            "email": "kaloyan.r@zend.com",
+            "homepage": "http://kaloyan.raev.name/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.23",
+        "zendframework/zend-eventmanager": "~2.3",
+        "zendframework/zend-http": "~2.3",
+        "zendframework/zend-modulemanager": "~2.3",
+        "zendframework/zend-mvc": "~2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZendStudioDevelopmentMode\\": "src/"
+        }
+    }
+}
