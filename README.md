@@ -8,7 +8,7 @@ Introduction
 
 This module adds the following configuration to the Zend Framework 2 application:
 * Adds a `Cache-Control: no-cache` header to the response object to avoid caching in Internet Explorer.
-* Changes the `Origin: file://` header in the request object sent by Android 4.x devices to `Origin: file://` to avoid failure when using the [ZfrCors](https://github.com/zf-fr/zfr-cors) module.
+* Changes the `Origin: file://` header in the request object sent by Android 4.x devices to `Origin: file:///` to avoid failure when using the [ZfrCors](https://github.com/zf-fr/zfr-cors) module.
 
 > ### NOTE
 >
