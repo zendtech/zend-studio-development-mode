@@ -8,9 +8,9 @@ namespace ZendStudioDevelopmentMode;
 
 use Zend\Mvc\MvcEvent;
 use Zend\Http\Header\Origin;
-use Zend\Http\Request;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 use Zend\EventManager\EventInterface;
+use Zend\Stdlib\RequestInterface;
 
 class Module implements BootstrapListenerInterface
 {
@@ -27,16 +27,16 @@ class Module implements BootstrapListenerInterface
         $this->fixBrokenOriginHeader($event->getRequest());
     }
 
-    public function onFinish(MvcEvent $e)
+    public function onFinish(MvcEvent $event)
     {
-        $response = $e->getResponse();
+        $response = $event->getResponse();
         if (! method_exists($response, 'getHeaders')) {
             return;
         }
         $response->getHeaders()->addHeaderLine('Cache-Control', 'no-cache');
     }
 
-    public function fixBrokenOriginHeader(Request $request)
+    public function fixBrokenOriginHeader(RequestInterface $request)
     {
         if (! method_exists($request, 'getHeaders') || ! method_exists($request, 'getServer')) {
             // Not an HTTP request
