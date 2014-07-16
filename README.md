@@ -1,7 +1,7 @@
 Zend Studio Development Mode
 ============================
 
-Zend Framework 2 module that helps the Zend Framework 2 application to be developed with Zend Studio.
+Zend Framework 2 module that helps developing Zend Framework 2 applications with Zend Studio.
 
 Introduction
 ------------
